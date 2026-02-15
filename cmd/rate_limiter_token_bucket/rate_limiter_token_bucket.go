@@ -32,19 +32,21 @@ func Allow(tokenBucket *TokenBucket) bool {
 	if tokenBucket.tokens >= 1 {
 		tokenBucket.tokens--
 		return true
-	} 
+	}
 
 	return false
 }
 
 func main() {
-	tokenBucket := TokenBucket{tokens: 10, capacity: 10, weight: 1, lastUpdate: time.Now()}
+	tokenBucket := TokenBucket{tokens: 2, capacity: 10, weight: 0.5, lastUpdate: time.Now()}
 
-	for i := range 100 {
+	for i := range 20 {
 		if Allow(&tokenBucket) {
-			fmt.Printf("Запрос %v разрешается делать", i+1)
+			fmt.Printf("Запрос %v разрешается делать\n", i+1)
 		} else {
-			fmt.Printf("Запрос %v не разрешается делать", i+1)
+			fmt.Printf("Запрос %v не разрешается делать\n", i+1)
 		}
+
+		time.Sleep(100 * time.Millisecond)
 	}
 }

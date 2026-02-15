@@ -2,13 +2,22 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch CMD",
+            "name": "Launch CMD rate_limiter",
             "type": "go",
             "request": "launch",
             "mode": "debug",
-            "program": "${workspaceFolder}/cmd/rate_limiter.go",
+            "program": "${workspaceFolder}/cmd/rate_limiter/rate_limiter.go",
             "env": {},
             "args": []
-        }
+        },
+         {
+            "name": "Launch CMD rate_limiter_token_bucket",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}/cmd/rate_limiter_token_bucket/rate_limiter_token_bucket.go",
+            "env": {},
+            "args": []
+        },
     ]
 }

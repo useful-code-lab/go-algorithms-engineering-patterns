@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-	limit := rate.Limit(1000)
+	limit := rate.Limit(1)
 	rateLimiter := rate.NewLimiter(limit, 2)
 	ctx := context.Background()
 

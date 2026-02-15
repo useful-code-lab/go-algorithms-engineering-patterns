@@ -8,7 +8,7 @@ import (
 
 type TokenBucket struct {
 	tokens     float64
-	capacity   float64 //На случай если пришло одновременно больше токенов
+	capacity   float64
 	lastUpdate time.Time
 	weight     float64
 

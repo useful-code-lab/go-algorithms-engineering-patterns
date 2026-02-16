@@ -23,6 +23,19 @@ func (list *LinkedList) Add(newNode *Node) {
 	}
 }
 
+func (list *LinkedList) Reverse() {
+	current := list.Head
+	currentPrev := current
+
+	for current.Next != nil {
+		current = current.Next
+		current.Next = currentPrev
+		currentPrev = current
+	}
+	
+	list.Head = current
+}
+
 func main() {
 	list := &LinkedList{}
 	node := Node{Value: 1}
@@ -33,6 +46,11 @@ func main() {
 		list.Add(&Node{Value: i+6})
 	}
 
+	Print(list)
+
+}
+
+func Print(list *LinkedList) {
 	current := list.Head
 	i := 1
 
@@ -42,5 +60,4 @@ func main() {
 		i++
 	}
 	fmt.Printf("%d-й элемент : %d\n", i, current.Value)
-
 }

@@ -25,15 +25,18 @@ func (list *LinkedList) Add(newNode *Node) {
 
 func (list *LinkedList) Reverse() {
 	current := list.Head
-	currentPrev := current
+	var currentPrev *Node
 
-	for current.Next != nil {
-		current = current.Next
+	for current != nil {
+		currentNew := current.Next
 		current.Next = currentPrev
+
+
 		currentPrev = current
+		current = currentNew
 	}
 	
-	list.Head = current
+	list.Head = currentPrev
 }
 
 func main() {
@@ -43,9 +46,15 @@ func main() {
 	
 
 	for i := range(5) {
-		list.Add(&Node{Value: i+6})
+		list.Add(&Node{Value: i + 6})
 	}
 
+	fmt.Println("Основной список:")
+	Print(list)
+
+	list.Reverse()
+
+	fmt.Println("После реверса:")
 	Print(list)
 
 }

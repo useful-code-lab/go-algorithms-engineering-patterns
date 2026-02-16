@@ -28,5 +28,14 @@
             "env": {},
             "args": []
         },
+        {
+            "name": "Launch CMD worker_pool",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}/cmd/worker_pool/worker_pool.go",
+            "env": {},
+            "args": []
+        },
     ]
 }

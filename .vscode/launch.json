@@ -55,5 +55,14 @@
             "env": {},
             "args": []
         },
+        {
+            "name": "Launch CMD account_transfer",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}/cmd/account_transfer/account_transfer.go",
+            "env": {},
+            "args": []
+        },
     ]
 }

@@ -37,5 +37,14 @@
             "env": {},
             "args": []
         },
+        {
+            "name": "Launch CMD binary_search",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}/cmd/binary_search/binary_search.go",
+            "env": {},
+            "args": []
+        },
     ]
 }

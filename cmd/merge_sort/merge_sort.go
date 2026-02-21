@@ -47,4 +47,13 @@ func main() {
 	fmt.Print("\nОтсортированный массив:\n", arr)
 
 
+	arr2 := []string{"aafdffd", "wwdsdsd", "cccc", "fffff", "kfkfkfk", "aaawwww"}
+	fmt.Print("\n\nНачальный массив:\n", arr2)
+	arr2 = MergeSort(arr2)
+
+	fmt.Print("\nОтсортированный массив:\n", arr2)
+
+
+
+
 }

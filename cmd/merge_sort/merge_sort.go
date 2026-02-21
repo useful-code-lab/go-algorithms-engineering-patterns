@@ -7,7 +7,7 @@ type MyNumbers interface {
 }
 
 func MergeSort[T MyNumbers](a []T) []T {
-	if len(a) < 1 {
+	if len(a) <= 1 {
 		return a
 	}
 
@@ -19,13 +19,13 @@ func MergeSort[T MyNumbers](a []T) []T {
 }
 
 func merge[T MyNumbers](a []T, b []T) []T {
-	result := make([]T, len(a)+len(b))
+	result := make([]T, 0, len(a)+len(b))
 
 	i := 0
 	j := 0
 	for i < len(a) && j < len(b) {
-		if a[i] > b[j] {
-			result = append(result, b[j])
+		if a[i] < b[j] {
+			result = append(result, a[i])
 			i++
 		} else {
 			result = append(result, b[j])
@@ -42,9 +42,9 @@ func merge[T MyNumbers](a []T, b []T) []T {
 func main() {
 	arr := []int{4, 6, 7, 8, 9, 6}
 	fmt.Print("Начальный массив:\n", arr)
-	MergeSort(arr)
+	arr = MergeSort(arr)
 
-	fmt.Print("Отсортированный массив:\n", arr)
+	fmt.Print("\nОтсортированный массив:\n", arr)
 
 
 }

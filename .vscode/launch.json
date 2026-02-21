@@ -64,5 +64,14 @@
             "env": {},
             "args": []
         },
+        {
+            "name": "Launch CMD merge_sort",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}/cmd/merge_sort/merge_sort.go",
+            "env": {},
+            "args": []
+        },
     ]
 }

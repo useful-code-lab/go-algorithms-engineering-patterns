@@ -5,8 +5,15 @@ type MyNumbers interface {
 }
 
 func MergeSort[T MyNumbers](a []T) []T {
-	
-	return merge()  
+	if len(a) < 1 {
+		return  a
+	}
+
+	d := len(a) / 2
+	m1 :=  MergeSort(a[:d]) 
+	m2 := MergeSort(a[d:])	
+
+	return merge(m1, m2)  
 }
 
 func merge[T MyNumbers](a []T, b []T) []T{

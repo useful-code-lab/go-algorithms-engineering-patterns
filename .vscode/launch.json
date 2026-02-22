@@ -91,5 +91,14 @@
             "env": {},
             "args": []
         },
+        {
+            "name": "Launch CMD dfs",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}/cmd/dfs/dfs.go",
+            "env": {},
+            "args": []
+        },
     ]
 }

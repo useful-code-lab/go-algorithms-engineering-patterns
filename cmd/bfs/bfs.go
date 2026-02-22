@@ -1,6 +1,9 @@
 package main
 
-func BFS(graph map[string][]string) {
+func BFS(start string, graph map[string][]string) {
+	startNode = graph[start]
+	visited := map[string]bool{start: true,}
+	queue := []string{start,}
 
 }
 
@@ -10,5 +13,5 @@ func main() {
 		"B": {"D", "F"},
 		"C": {"K", "L"},
 	}
-	BFS(Graph)
+	BFS("A", Graph)
 }

@@ -7,15 +7,16 @@ func BFS(start string, graph map[string][]string) {
 	queue := []string{start}
 
 	fmt.Println("Посещённые элементы:")
-	if len(queue) > 0 {
+	for len(queue) > 0 {
 		element := queue[0]
 		queue = queue[1:]
+
+		fmt.Printf("%s ", element)
 
 		for _, el := range graph[element] {
 			if !visited[el] {
 				visited[el] = true
 				queue = append(queue, el)
-				fmt.Printf("%s ", el)
 			}
 		}
 	}

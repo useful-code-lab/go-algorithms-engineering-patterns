@@ -100,5 +100,14 @@
             "env": {},
             "args": []
         },
+        {
+            "name": "Launch CMD dfs_iterative",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}/cmd/dfs_iterative/dfs_iterative.go",
+            "env": {},
+            "args": []
+        },
     ]
 }

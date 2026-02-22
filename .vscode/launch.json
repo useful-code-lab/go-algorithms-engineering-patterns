@@ -82,5 +82,14 @@
             "env": {},
             "args": []
         },
+        {
+            "name": "Launch CMD bfs_shortest",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "${workspaceFolder}/cmd/bfs_shortest/bfs_shortest.go",
+            "env": {},
+            "args": []
+        },
     ]
 }
